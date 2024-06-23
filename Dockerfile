@@ -20,7 +20,7 @@ WORKDIR /workspace/Python-3.11.1
 RUN ./configure --prefix=/workspace/python3.11.1 --enable-optimizations && make && make install
 WORKDIR /workspace
 #RUN rm -rf Python-3.11.1/ Python-3.11.1.tgz && ln -sf /workspace/python3.11.1/bin/python3 /usr/bin/python && ln -sf /workspace/python3.11.1/bin/pip3 /usr/bin/pip && pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ && python -m pip install --upgrade pip && python -m pip install --user pipx && python -m pipx ensurepath && python -m pipx install nb-cli
-RUN rm -rf Python-3.11.1/ Python-3.11.1.tgz && ln -sf /workspace/python3.11.1/bin/python3 /usr/bin/python && ln -sf /workspace/python3.11.1/bin/pip3 /usr/bin/pip && pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ && python -m pip install --upgrade pip python -m pip install nb-cli
+RUN rm -rf Python-3.11.1/ Python-3.11.1.tgz && ln -sf /workspace/python3.11.1/bin/python3 /usr/bin/python && ln -sf /workspace/python3.11.1/bin/pip3 /usr/bin/pip && pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ && python -m pip install --upgrade pip && python -m pip install nb-cli
 
 
 COPY Lagrange.OneBot .
